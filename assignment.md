@@ -27,7 +27,7 @@ Select the average price per sqm for flats in each town.
 ```sql
 SELECT 
     town,
-    AVG(price_per_sqm) AS AvgPricePerSqm
+    ROUND(AVG(price_per_sqm), 2) AS AvgPricePerSqm
 FROM 
     flats
 GROUP BY 
